@@ -45,7 +45,7 @@ public class OrderSummery {
         //shows in console
         System.out.printf("Customer : %.10s %n", customerName);
         chooseItem(orderId,quantity,isMember);
-        printInConsole(price,quantity,isMember);
+        printInConsole(quantity,isMember);
         System.out.println();
         System.out.println("======================================");
         System.out.printf("%15s %1s%n","Thank you,", customerName);
@@ -120,7 +120,7 @@ public class OrderSummery {
         }
     }
 
-    public static void printInConsole(double price, int quantity, boolean isMember){
+    public static void printInConsole(int quantity, boolean isMember){
         System.out.printf("Item     : %.10s * %.3s %n", item,quantity);
         double subTotal = calculateSubtotal(priceMenu,quantity);
         System.out.printf("SubTotal : %.2f SEK%n",subTotal);
